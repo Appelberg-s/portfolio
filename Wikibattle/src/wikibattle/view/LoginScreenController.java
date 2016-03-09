@@ -20,21 +20,21 @@ public class LoginScreenController implements WikiController {
 	@FXML private PasswordField passwordField;
 	@FXML private Button signUpButton;
 	@FXML private Button loginButton;
-	
+
 	private WikiMainApp mainApp;
 	private DatabaseConnection database;
-	
+
 	@FXML
 	private void initialize () {
 		try {
-			database = new DatabaseConnection("usr_14615787", "db_14615787", "615787", "atlas.dsv.su.se"); 
+			database = new DatabaseConnection("***", "***", "***", "***"); 
 		} catch (SQLException e) {
 			Alert alert = new Alert(AlertType.ERROR);
 			alert.setContentText("Something went wrong with the database connection.");
 			alert.showAndWait();
 		}
 	}
-	
+
 	@FXML
 	private void handleSignUp () {
 		if (userNameField.getText().contains(">") || userNameField.getText().contains("<")) {
@@ -66,9 +66,9 @@ public class LoginScreenController implements WikiController {
 				alert.showAndWait();
 			}
 		}
-		
+
 	}
-	
+
 	@FXML
 	private void handleLogin () {
 		if (userNameField.getText().contains(">") || userNameField.getText().contains("<")) {
@@ -100,10 +100,10 @@ public class LoginScreenController implements WikiController {
 			}
 		}
 	}
-	
+
 	@Override
 	public void setMainApp(WikiMainApp mainApp) {
 		this.mainApp = mainApp;
 	}
-	
+
 }
