@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane id="scorescreen-borderpane" maxHeight="350.0" maxWidth="240.0" prefHeight="350.0" prefWidth="240.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wikibattle.view.ScoreScreenController">
+   <top>
+      <VBox alignment="TOP_CENTER" spacing="3.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Score Screen" underline="true">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="outcomeLabel" text="Outcome">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <GridPane prefHeight="199.0" prefWidth="240.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="93.0" minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="196.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="204.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="204.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="204.0" minHeight="10.0" prefHeight="17.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="player1Name">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <GridPane prefHeight="40.0" prefWidth="215.0" GridPane.rowIndex="1">
+              <columnConstraints>
+                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="player1Clicks" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="Arial" size="11.0" />
+                     </font></Label>
+                  <Label text="Total clicks:">
+                     <font>
+                        <Font name="Arial" size="10.0" />
+                     </font>
+                  </Label>
+               </children>
+               <GridPane.margin>
+                  <Insets left="15.0" />
+               </GridPane.margin>
+            </GridPane>
+            <GridPane GridPane.rowIndex="3">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="totalClicks2" text="Total clicks:">
+                     <font>
+                        <Font name="Arial" size="10.0" />
+                     </font></Label>
+                  <Label fx:id="player2Clicks" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="Arial" size="11.0" />
+                     </font></Label>
+               </children>
+               <GridPane.margin>
+                  <Insets left="15.0" />
+               </GridPane.margin>
+            </GridPane>
+            <Label fx:id="player2Name" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+   </center>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+   <bottom>
+      <AnchorPane prefHeight="103.0" prefWidth="230.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="backToMenuButton" layoutX="10.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleBackButton" prefHeight="25.0" prefWidth="113.0" text="Main Menu" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+            <Button fx:id="continueButton" layoutX="10.0" layoutY="52.0" mnemonicParsing="false" onAction="#handleContinueButton" text="Continue Reading" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

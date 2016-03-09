@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="425.0" prefWidth="275.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wikibattle.view.OngoingSessionsController">
+   <center>
+      <ListView fx:id="sessionListView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+   <top>
+      <AnchorPane prefHeight="30.0" prefWidth="275.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button styleClass="tinyButton" layoutX="2.0" layoutY="2.0" mnemonicParsing="false" onAction="#handleBackButton" text="&lt;" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="2.0" />
+            <Label layoutX="57.0" layoutY="5.0" text="Ongoing Sessions" AnchorPane.topAnchor="5.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Button styleClass="tinyButton" layoutX="210.0" layoutY="2.0" mnemonicParsing="false" onAction="#handleRefresh" prefHeight="25.0" prefWidth="71.0" text="Refresh" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>
